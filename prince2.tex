@@ -1,12 +1,17 @@
 %! TeX program = lualatex
 \documentclass[12pt,twoside]{article}
+
 \usepackage[a4paper,left=20mm,right=20mm,top=25mm,bottom=25mm,headheight=15pt]{geometry}
 \usepackage[utf8]{inputenc}
+\usepackage{parskip}
+\usepackage{enumitem}
+\usepackage[colorlinks=true]{hyperref}
 
 \title{PRINCE2 Principper}
-\author{Andreas Kr\"{u}hlmann}
+\author{Andreas Krühlmann}
 
 \pagenumbering{arabic}
+\setlist{nosep}
 
 \begin{document}
     \maketitle
@@ -22,131 +27,266 @@
     Erfaring fra tidligere projekter skal benyttes, og erfaringer nuværende projekter skal dokumenteres, så de kan benyttes i fremtiden. Det foregår i følgende perioder:
 
     \subsubsection*{Projektstart}
-
+    Ved projektopstart skal tidligere erfaringer gennemgås for bedre at kunne planlægge det nye projekt og undgå problemer, der tidligere er blevet mødt. Tidligere erfaringer kan også bistå i udbedringen af udfordringer i løbet at projektet.
     \subsubsection*{Projktudvikling}
-
+    Under projektudviklingen skal erfaringer dokumenteres så de kan anvendes i fremtidige projekter.
     \subsubsection*{Projektafslutning}
+    Ved afslutningen af et projekt skal erfaringer arkiveres og kategoriseres efter om de er "learnings" (der er sket ændringer grundet erfaringen) eller "lessons" (ingen ændringer er foretaget, der er blot lavet en identifikation).
 
     \subsection{Defined Roles and Responsibilities}
+    \label{sec:defined_roles_and_responsibilities}
+    Det er vigtigt at projektet har en veldefineret projekt management struktur. Det betyder at de primære stakeholders er kendt indenfor projektet.
+
+    \subsubsection*{Business}
+    Business stakeholders har anvar for at sikre at organisationens investering i projektet giver god værdi i forhold til investeringens størrelse.
+
+    \subsubsection*{Users}
+    User stakeholders agerer som den endelige kunde, og de er målet for projektets funktion.
+
+    \subsubsection*{Suppliers}
+    Supplier stakeholders forsyner projektet med resourcer og expertise. Kombineret sørger alle 3 stakeholder grupper for at holde projektet balanceret, og det udlægger den enkeltes anvsarsområde og opgaver.
 
     \subsection{Manage by Stages}
+    PRINCE2 foreskriver 2 planer; en kortsigtet team plan og en langsigtet projektplan. Den kortsigtede plan beskriver de umiddelbare opgaver for teamet, mens den langsigtede plan giver det store perspektiv. Hvert stage evalueres efterfølgende og lessons/learnings tages til efterretning i efterfølgende stages.
 
     \subsection{Manage by Exception}
+    Det er ikke effektivt at have højere mangement som ansvarlig for at styre projektets KPI'er direkte. Der ligges derfor et generelt udlæg som baseline, hvilket projekt manageren bruger til at korigere projektets kurs. Hyppigt anvendte KPI'er er:
+    \begin{itemize}
+        \item Tid
+        \item Omkostninger
+        \item Kvalitet
+        \item Scope
+        \item Risiko
+        \item Udbytte
+    \end{itemize}
+    Her er det en fordel at sætte kontroller op på KPI'erne for at sikre at de ikke afviger ukontrolleret fra baseline sat af højere management.
 
     \subsection{Focus on Products}
+    Ifølge PRINCE2 er et succesfuldt projekt produktorienteret og ikke aktivitetsorienteret. Det vil sige at kvalitet og ønsker fra projektets stakeholders er i fokus. Heri er det vigtigt at holde projektets scope for øje for at undgå "scope creep".
+
+    \subsection{Tailor to suit the project environment}
+    PRINCE2 kan anvendes til et stort array af projekttyper, og det kan derfor skræddersyes til det aktuelle miljø. Formålet med adapteringen er at PM processerne stemmer overens med de eksisterende business processer og projektets/organisationens generelle miljø. Deri ligger også rapporteringen og vægtningen af projektets KPI'er.
+    \newpage
 
     \section{De 7 "Themes"}
 
+    \subsection{Business Case}
+    \label{sec:business_case}
+    Business Case er idéen, der bygges et projekt op omkring. Idéen skal repræsentere potentiel værdi for organisationen. Temaet anvendes til løbende at vurdere om denne værdi eksisterer og er realistisk at udarbejde, for at retfærdiggøre initielle og yderligere investeringer. Vurderes en business case til ikke længere at levere den nødvendige værdi bør projektet stoppes.
+
+    \subsection{Organization}
+    Et af de 7 PRINCE2 principper omhandler en veldefineret organisation og PM struktur. Temaet uddyber strukturen ved følgende retningslinjer angående hvordan et PM team bør opsættes:
+    \begin{itemize}
+        \item Indeholde repræsentanter fra kunde, organisation og supplier
+        \item Veldefinerede og afgrænsede ansvarsområder for de inkluderede roller
+        \item Løbende review af projektroller
+        \item En veldokumenteret kommunikationsstrategi
+    \end{itemize}
+    For at kunne fungere i et stort sæt af miljøer fremskriver PRINCE2 ikke rigide management funktioner, men udlægger istedet organisations roller, der er associeret med bestemte ansvarsområder indenfor projektet. Det gør at en organisation lettere kan omstille sig til PRINCE2 og integrere det med eksisterende business processer.
+
+    \subsection{Quality}
+    Målet med Quality temaet er at definere og implementere metoder til at validere kvaliteten af projekter. Heri er kernen at sikre at både organisationens interne forventninger mødes samt at den endelige kunde opnår den ønskede effekt af projektet.
+
+    Under begge disse mål er det vigtigt at holde projektets scope for øje. Skrider scopet udover det nødvendige beskrevet i Project Description kan de have en negativ indflydelse på organisationens interne forventninger, da der kan være brugt flere resourcer en højst nødvendigt. På den anden side, hvis scope ikke er fuldt mødt, kan det have negative konsekvenser for den endelige effekt hos kunden.
+
+    At holde projektet indenfor scope er derfor en primær prioritet angående kvalitetskontrol.
+
+    \subsection{Plans}
+    \label{sec:plans}
+    Formålet med en plan er at identificere og tildele opgaver indenfor organisationen, hvor mange resourcer opgaverne skal tildeles, hvad deres tidshorizont er og deres fordele for projektet.
+
+    Udfra planen kan en baseline defineres af højere management, der anvendes af projektet project manager til at vurdere projektets fremgang indenfor planen. Det gør at eventuelle afvigelser kan identifiers og handles på så tidligt som muligt i planen.
+
+    Der eksistere flere typer planer, hvert med deres specifikke scope.
+
+    \subsubsection*{Project plan}
+    Project plan er den gennemløbende plan for projektets levetid. Den beskriver det store billede eksempelvis ved brug af projekt milestones.
+
+    \subsubsection*{Stage plan}
+    Stage plan ligner projct plan men eksiterer på et mere detaljeret plan i en begrænset tidsperiode af projektets levetid. I en stage plan detaljeres det opgaver til en grad, der tillader at det daglige arbejde kan valideres af projektets PM.
+
+    Da stage plans udarbejdes flere gange i projektet kan efterfølgende stage plans inkludere erfaringer fra tidligere planer.
+
+    \subsubsection*{Team plan}
+    Afhængig af teamets størrelse og organisationens krav kan en team manager udvikle en team plan. Heri kan team manageren mere konkret styre udarbejdelse af teamets arbejde internt. 
+
+    \subsubsection*{Exception plan}
+    En exception plan kan klargøres på forhånd i tilfælde af større afvigelser i én eller flere KPI'er. Formålet er at ét bestemt niveau af management hierarkiet kan dokumentere handlinger, der bør tages i forbindelse med afhjælpningen af afvigelsen.
+
+    Målet er at den aktuelle exception plan overtager enten den nuværende stage plan, eller den overordnede project plan, i tilfælde af større afvigelser. Derfor udvikles en exception plan indenfor det scope, hvori den er designet til at overtage.
+
+    \subsection{Risk}
+    Risk management under PRINCE2 løber i 3 stadier:
+
+    \subsubsection*{Identifikation}
+    Dokumentation af risks, der overvejes, hvorved der skabes en fælles forståelse for den enkelte risks påvirkning af projektet.
+
+    \subsubsection*{Vurdering}
+    Categorisering af risks under følgende kernevurderinger:
+    \begin{itemize}
+        \item Sandsynlighed
+        \item Alvorlighed af indvirkning
+        \item Umiddelbarhed
+    \end{itemize}
+
+    \subsubsection*{Kontrol}
+    Identifikation af både potentielle handlinger til at mitigere indvirkningen og tovholdere, udførelse af identificerede handlinger og overvågning af udviklingen efterfølgende.
+
+    \subsection{Change}
+    Ændringer til projektet efter start kontrolleres vha. et issue register. I et issue register bliver ændringsforslag registreret og arkiveret. Det tillader projektets project manager at løbende holde øje med og opfylde ændringsforslag.
+
+    Ændringsforslag kategoriseres under følgende prioriteter, som løbende genvurderes:
+
+    \subsubsection*{Must have}
+    Essentielle ændringer, der er kritiske for projektets succes.
+
+    \subsubsection*{Should have}
+    Vigtige ændringer, der svækker det endelige resultat hvis ikke implementeret.
+
+    \subsubsection*{Could have}
+    Ikke-essentielle ændringer, der ikke svækker det endelige resultat hvis ikke implementeret.
+
+    \subsubsection*{Won't have}
+    Ændringen er ikke vigtig, og skal ikke implementeres uden genvurdering.
+
+    Under kategoriseringen skal fordele ved implementering vægtes imod den forventede omkostning for at give den endelige kategorisering.
+
+    \subsection{Progress}
+    Formålet med progress temaet er at etablere systemer/processer til at overvåge projektets fremgang. Det kan bruges til at vurdere den endelige tidshorizont for enten hele projektet eller en mindre iteration.
+
+    Hvert niveau af projekthierarkiet holder øje med bestemt sektion af fremgangen. Højere management tager sig af det overordnede fremgangsbillede, hvor lavere dele af hierarkiet fokusere på et kortere plan og rapporterer opad.
+
+    Til at vurdere fremgangen på de forskellige niveauer kombineres mange af de tidligere målepinde såsom planer, risks og ændringsforslag.
+
+    \newpage
+
     \section{De 7 "Processes"}
 
+    \subsection{Starting up a project}
+    For at kunne retfærdiggøre at starte et projekt skal følgende elementer være opfyldt:
+
+    \begin{itemize}
+        \item Der er udarbejdet en velbegrundet \nameref{sec:business_case}
+        \item Projektstart er autoriseret
+        \item Der eksisterer tilstrækkelig information til at definere projektets scope
+        \item Aflevering og evaluering af projektresultatet er dokumenteret
+        \item Organisationsmedlemmer er tildelt roller i overensstemmelse \nameref{sec:defined_roles_and_responsibilities}
+        \item Opgaver associeret med projekstarten er planlagt i henhold til \nameref{sec:plans}
+    \end{itemize}
+
+    Under opstart tages relevante tidligere erfaringer i brug under udarbejdelsen af projektinitialisationensplanen.
+
+    \subsection{Directing a project}
+
+    \subsection{Initiating a project}
+
+    \subsection{Controlling a stage}
+
+    \subsection{Managing product delivery}
+
+    \subsection{Managing a stage boundary}
+
+    \subsection{Closing a projec}
+
+    \newpage
+
     \section{Roles and responsibilities}
+    Lorem ipsum
 
-    \subsection{Continued business justification}
+    \newpage
 
-    \subsection{Learn from experience}
+    \section{Spørgsmål}
 
-    \subsection{Define roles and responsibilities}
-
-    \subsection{Manage by stages}
-
-    \subsection{Manage by exception}
-
-    \subsection{Focus on products}
-
-    \subsection{Tailor to suit the project environment}
-
-    \section{Sp\o{}rgsm\r{a}l}
-
-    \subsection{Sp\o{}rgsm\r{a}l 1}
+    \subsection{Spørgsmål 1}
     \textit{Hvad er PRINCE2´s definitionen på et projekt?}
-    \subsection{Sp\o{}rgsm\r{a}l 2}
+    \subsection{Spørgsmål 2}
     \textit{Hvad karakteriserer et projekt i forhold til daglig drift?}
-    \subsection{Sp\o{}rgsm\r{a}l 3}
-    \textit{Overvej hvorfor det er centralt for PRINCE2, at projekter laves af en midlertidig projektorganisation som udnævnes til projektet, i stedet for blot at lade ”line management” (linjeledelsen) lave projekterne}
-    \subsection{Sp\o{}rgsm\r{a}l 4}
+    \subsection{Spørgsmål 3}
+    \textit{Overvej hvorfor det er centralt for PRINCE2, at projekter laves af en midlertidig projektorganisation som udnævnes til projektet, i stedet for blot at lade "line management" (linjeledelsen) lave projekterne}
+    \subsection{Spørgsmål 4}
     \textit{Hvilke 6 præstationsmål(Performance Targets) har PRINCE2 fokus på?}
-    \subsection{Sp\o{}rgsm\r{a}l 5}
+    \subsection{Spørgsmål 5}
     \textit{Figur 11.2 PRINCE2 manualen er en oversigt over PRINCE2´s procesmodel. Indsæt et screendump af den her.}
-    \subsection{Sp\o{}rgsm\r{a}l 6}
+    \subsection{Spørgsmål 6}
     \textit{Find ”Project Mandate”(projektkommissoriet) på PRINCE2´s procesmodel på figur 11.2}
-    \subsection{Sp\o{}rgsm\r{a}l 7}
+    \subsection{Spørgsmål 7}
     \textit{Lav en kort sammenfatning over formålet med projektkommissoriet(Project Mandate) (1- 2 sætninger)}
-    \subsection{Sp\o{}rgsm\r{a}l 8}
+    \subsection{Spørgsmål 8}
     \textit{Hvilke oplysninger bør findes i projektkommissoriet(Project Mandate)?}
-    \subsection{Sp\o{}rgsm\r{a}l 9}
+    \subsection{Spørgsmål 9}
     \textit{Skal projektets forventede udbytte(Benefits) altid kvantificeres?}
-    \subsection{Sp\o{}rgsm\r{a}l 10}
+    \subsection{Spørgsmål 10}
     \textit{Skal projektets udbytter(Benefits) altid udtrykkes som økonomiske fordele?}
-    \subsection{Sp\o{}rgsm\r{a}l 11}
+    \subsection{Spørgsmål 11}
     \textit{Hvem er operationelt ansvarlig for at det udbytte(Benefit) der står i Business Casen også bliver realiseret?}
-    \subsection{Sp\o{}rgsm\r{a}l 12}
+    \subsection{Spørgsmål 12}
     \textit{Hvornår udarbejdes Plan for Udbyttereview(Benefits Review Plan)?}
-    \subsection{Sp\o{}rgsm\r{a}l 13}
+    \subsection{Spørgsmål 13}
     \textit{Lav en kort beskrivelse af formålet med at have en projektorganisation (1-5 linjer)}
-    \subsection{Sp\o{}rgsm\r{a}l 14}
+    \subsection{Spørgsmål 14}
     \textit{Er en projektorganisation midlertidig eller fast?}
-    \subsection{Sp\o{}rgsm\r{a}l 15}
+    \subsection{Spørgsmål 15}
     \textit{Hvor mange niveauer indgår i en PRINCE2 projektorganisation? Hvilke?}
-    \subsection{Sp\o{}rgsm\r{a}l 16}
+    \subsection{Spørgsmål 16}
     \textit{Hvilke tre interesser indgår i et projekt, og hvilken rolle har fokus på at varetage forretningens interesse?}
-    \subsection{Sp\o{}rgsm\r{a}l 17}
+    \subsection{Spørgsmål 17}
     \textit{Hvilken rolle kan det være vanskeligt at fastsætte før projektfremgangsmåden er fastlagt?}
-    \subsection{Sp\o{}rgsm\r{a}l 18}
+    \subsection{Spørgsmål 18}
     \textit{Hvor mange personer er der mindst involveret i et PRINCE2 projekt?}
-    \subsection{Sp\o{}rgsm\r{a}l 19}
+    \subsection{Spørgsmål 19}
     \textit{Forestil dig, at du arbejder i en kommune skal have nye PC’ere på deres skoler. Du er blevet bedt om at være Projektleder, og møder for første gang Styregruppen(Project Board), som omfatter 23 personer. Hvad vil du anbefale Styregruppen(Project Board)?}
-    \subsection{Sp\o{}rgsm\r{a}l 20}
+    \subsection{Spørgsmål 20}
     \textit{Hvad bruges Kvalitetsregisteret(Quality Register) til under Planlægningen af den næste fase?}
-    \subsection{Sp\o{}rgsm\r{a}l 21}
+    \subsection{Spørgsmål 21}
     \textit{I hvilken proces udarbejdes projektets Slutproduktbeskrivelse(Project Product Description)?}
-    \subsection{Sp\o{}rgsm\r{a}l 22}
+    \subsection{Spørgsmål 22}
     \textit{Hvornår udarbejdes Produktbeskrivelserne(Product Descriptions)?}
-    \subsection{Sp\o{}rgsm\r{a}l 23}
+    \subsection{Spørgsmål 23}
     \textit{Hvor er Kvalitetstolerancerne(Quality Tolerance) beskrevet, i hvilken sammenhæng?}
-    \subsection{Sp\o{}rgsm\r{a}l 24}
+    \subsection{Spørgsmål 24}
     \textit{Hvor er Kvalitetskriterierne(Quality Criteria) beskrevet, i hvilken sammenhæng?}
-    \subsection{Sp\o{}rgsm\r{a}l 25}
+    \subsection{Spørgsmål 25}
     \textit{Hvad anvender man Slutproduktbeskrivelsen(Project Product Description) til?}
-    \subsection{Sp\o{}rgsm\r{a}l 26}
+    \subsection{Spørgsmål 26}
     \textit{Kan man ændre i Slutproduktbeskrivelsen(Project Product Description), efter Start af et Projekt(Starting a Project) processen og i givet fald, hvem kan godkende ændringer?}
-    \subsection{Sp\o{}rgsm\r{a}l 27}
+    \subsection{Spørgsmål 27}
     \textit{Hvorfor skal projektfremgangsmåden(Project Approach) bestemmes allerede i Start af et Projekt(Starting up a Project)? Kan man ikke vente med at definere fremgangsmåden, når man laver Projektplanen(Project plan) i Initiering af et Projekt(Initiating a Project) processen?}
-    \subsection{Sp\o{}rgsm\r{a}l 28}
+    \subsection{Spørgsmål 28}
     \textit{Hvor er detaljerne omkring datoer, omkostninger og milepæle beskrevet?}
-    \subsection{Sp\o{}rgsm\r{a}l 29}
+    \subsection{Spørgsmål 29}
     \textit{Hvorfor er det vigtigt at have taget stilling til Risikostyringsstrategien(Risk Management Strategy) for et projekt?}
-    \subsection{Sp\o{}rgsm\r{a}l 30}
+    \subsection{Spørgsmål 30}
     \textit{Hvad har man i virkeligheden besluttet, hvis man ikke vil anvende ressourcer til risikostyring(Risk Management)?}
-    \subsection{Sp\o{}rgsm\r{a}l 31}
+    \subsection{Spørgsmål 31}
     \textit{Hvad skal Teamlederen(Team Manager) gøre så snart han/hun bliver bekendt med at de planlagte produkter(Work Package) ikke kan afleveres inden for tolerancerne(Tolerances)?}
-    \subsection{Sp\o{}rgsm\r{a}l 32}
+    \subsection{Spørgsmål 32}
     \textit{Hvor er detaljerne omkring disse tolerancer(Tolerances) beskrevet?}
-    \subsection{Sp\o{}rgsm\r{a}l 33}
+    \subsection{Spørgsmål 33}
     \textit{Hvad skal Teamlederen(Team Manager) gøre så snart han/hun bliver bekendt med at de planlagte produkter(Work Package) ikke kan leveres i henhold til forventningerne(Expectations)?}
-    \subsection{Sp\o{}rgsm\r{a}l 34}
+    \subsection{Spørgsmål 34}
     \textit{Hvad er PRINCE2 termen for disse forventninger(Expectations) og hvor er de beskrevet?}
-    \subsection{Sp\o{}rgsm\r{a}l 35}
+    \subsection{Spørgsmål 35}
     \textit{Hvad er de 4 karakteristika (characteristics) som alle medlemmer af Styregruppen(Project Board) bør besidde?}
-    \subsection{Sp\o{}rgsm\r{a}l 36}
+    \subsection{Spørgsmål 36}
     \textit{Vi hører ofte fra organisationer, at det hos dem er det projektlederen(Project Manager) der har det overordnede ansvar for projektet. Kan dette være en god idé, eller er det uhensigtsmæssigt? Begrund dit svar.}
-    \subsection{Sp\o{}rgsm\r{a}l 37}
+    \subsection{Spørgsmål 37}
     \textit{Hvilke 3 registre oprettes i initieringsfasen(Initiation a Project)?}
-    \subsection{Sp\o{}rgsm\r{a}l 38}
+    \subsection{Spørgsmål 38}
     \textit{Hvilket budget er tæt forbundet med konfigurationsstyring(Configuration Management)? Begrund dit svar.}
-    \subsection{Sp\o{}rgsm\r{a}l 39}
+    \subsection{Spørgsmål 39}
     \textit{Hvilket ledelsesprodukt(Management Product) anvendes til at registrere gennemførte kvalitetsaktiviteter(Quality Activities)?}
-    \subsection{Sp\o{}rgsm\r{a}l 40}
+    \subsection{Spørgsmål 40}
     \textit{Hvornår registreres planlagte kvalitetssikringsaktiviteter(Quality Assurance Activities)?}
-    \subsection{Sp\o{}rgsm\r{a}l 41}
+    \subsection{Spørgsmål 41}
     \textit{Hvornår begynder Styregruppens(Project Board) arbejde i projektet: Før eller efter beslutningen om at godkende initiering? Begrund dit svar.}
-    \subsection{Sp\o{}rgsm\r{a}l 42}
+    \subsection{Spørgsmål 42}
     \textit{Hvornår kan Styregruppen(Project Board) afslutte et projekt?}
-    \subsection{Sp\o{}rgsm\r{a}l 43}
+    \subsection{Spørgsmål 43}
     \textit{Giv nogle begrundelse for, hvorfor en Styregruppe(Project Board) kan vælge at afslutte et projekt før tid.}
-    \subsection{Sp\o{}rgsm\r{a}l 44}
+    \subsection{Spørgsmål 44}
     \textit{Hvad skal der ske, når et PRINCE2 projekt afsluttes, uanset om det afsluttes i utide eller i henhold til planen?}
-    \subsection{Sp\o{}rgsm\r{a}l 45}
+    \subsection{Spørgsmål 45}
     \textit{På et møde i den virksomhed, som du arbejder i, diskuterer I at implementere PRINCE2 i afdelingen, men flere udtrykker bekymring over, at man får et stort og besværligt projektbureaukrati. Derfor bliver det besluttet at indføre en ”PRINCE light” version. Hvad er din kommentar til dette?}
-    \subsection{Sp\o{}rgsm\r{a}l 46}
+    \subsection{Spørgsmål 46}
     \textit{Hvor i projektets dokumentation beskriver man, hvorledes PRINCE2 er tilpasset det pågældende projekt?}
 \end{document}
